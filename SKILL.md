@@ -12,16 +12,15 @@ requires: agent-reach
 
 **不再用 `web_fetch`。** 全部走 Agent-Reach 提供的原生命令行工具：
 
-| 平台 | 命令 | 编码 |
+| 平台 | 命令 | 状态 |
 |------|------|------|
-| 📺 B站 | `bili search "关键词" --type video --json` | ✅ UTF-8 |
-| 📕 小红书 | `opencli xiaohongshu search "关键词" -f yaml` | ✅ UTF-8 |
-| 🐦 Twitter/X | `opencli twitter search "关键词" -f yaml` | ✅ |
-| 📖 Reddit | `opencli reddit search "关键词" -f yaml` | ✅ |
-| 💻 GitHub | `gh search repos "关键词" --limit 20` | ✅ |
-| 📹 YouTube | `yt-dlp "ytsearch10:关键词" --dump-json` | ✅ |
-| 🌐 网页 | `curl -s "https://r.jina.ai/URL"` (Jina Reader) | ✅ |
-| 🌐 全网 | `curl -s "https://r.jina.ai/https://www.baidu.com/s?wd=关键词"` | ✅ |
+| 📺 B站 | `bili search "XX" --type video --json` | ✅ |
+| 📕 小红书 | `opencli xiaohongshu search "XX" -f yaml` | ✅ (需Chrome登录态) |
+| 📖 Reddit | `opencli reddit search "XX" -f yaml` | ✅ (需Chrome登录态) |
+| 🐦 Twitter | `opencli twitter search "XX" -f yaml` | ✅ (需Chrome登录态) |
+| 📹 YouTube | `yt-dlp "ytsearch20:XX" --dump-json` | ⚠️ 需配JS runtime |
+| 💻 GitHub | `gh search repos "XX" --limit 20` | ⚠️ 需装 gh CLI |
+| 🌐 网页 | `curl -s "https://r.jina.ai/URL"` | ✅ |
 | 📰 RSS | `python3 -c "import feedparser..."` | ✅ |
 
 **Python 虚拟环境**：所有命令需先激活：
